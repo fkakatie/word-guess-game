@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- JAVSCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
 </head>
 
@@ -28,7 +29,7 @@
 
         <div class="container grid">
 
-            <div class="wordToGuess">
+            <div id="wordToGuess">
                 <p>Guess Me!</p>
             </div>
 
@@ -37,9 +38,9 @@
             </div>
 
             <div class="gameStats">
-                <p>Guesses Left:</p>
-                <p>Wins:</p>
-                <p>Losses:</p>
+                <p>Guesses Left: <span id="guessesLeft">7</span></p>
+                <p>Wins: <span id="wins">0</span></p>
+                <p>Losses: <span id="losses">0</span></p>
             </div>
 
         </div>

@@ -50,7 +50,7 @@ section {
     padding: 15px;
 }
 
-.wordToGuess {
+#wordToGuess {
     grid-column: span 2;
     font-size: 3em;
     text-align: center;
