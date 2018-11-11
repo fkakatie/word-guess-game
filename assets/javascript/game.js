@@ -165,7 +165,7 @@ document.onkeyup = function (event) {
     }
     // for previously guessed keystrokes
     else if (userGuesses.includes(userGuess)) {
-        document.querySelector("#messageToUser").innerHTML ="You've already guessed " + userGuess + "!")
+        document.querySelector("#messageToUser").innerHTML ="You've already guessed " + userGuess + "!";
     }
     // for running the game otherwise
     else {
