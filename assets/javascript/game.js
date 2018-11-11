@@ -24,7 +24,7 @@ var wordList = [
     {name: "MEREDITH", img: "assets/images/mpalmer.jpg"},
     {name: "MICHAEL", img: "assets/images/mscott.jpg"},
     {name: "NATE", img: "assets/images/nnickerson.jpg"},
-    {name: "NELLY", img: "assets/images/nbertram.jpg"},
+    {name: "NELLIE", img: "assets/images/nbertram.jpg"},
     {name: "OSCAR", img: "assets/images/omartinez.jpg"},
     {name: "PAM", img: "assets/images/pbeesly.jpg"},
     {name: "PETE", img: "assets/images/pmiller.jpg"},
