@@ -8,7 +8,7 @@ var wordList = [
     {name: "CLARK", img: "assets/images/cgreen.jpg"},
     {name: "CREED", img: "assets/images/cbratton.jpg"},
     {name: "DANNY", img: "assets/images/dcordray.jpg"},
-    {name: "DARYLL", img: "assets/images/dphilbin.jpg"},
+    {name: "DARRYL", img: "assets/images/dphilbin.jpg"},
     {name: "DAVID", img: "assets/images/dwallace.jpg"},
     {name: "DEANGELO", img: "assets/images/dvickers.jpg"},
     {name: "DWIGHT", img: "assets/images/dschrute.jpg"},
