@@ -129,7 +129,7 @@ function newWord() {
     randomNumber = Math.floor(Math.random() * wordList.length);
     computerChoice = wordList[randomNumber].name // chooses new word
     generateUnderscores();
-    console.log(computerChoice);
+    console.log("Hey cheater, it's " + computerChoice + ".");
     userGuess = " "; // clears userGuess, to be replaced by event.key
     printWord();
     displayImage();
@@ -158,15 +158,14 @@ function ifWinOrLoss() {
 // collect userGuess by keystroke
 document.onkeyup = function (event) {
     userGuess = event.key.toUpperCase(); // convert to uppercase
-    console.log(userGuess);
 
     // for non-alphabet keystroke
     if (alphabet.indexOf(userGuess) === -1) {
-        console.log("Letters only, please.");
+        document.querySelector("#messageToUser").innerHTML = "Letters only!";
     }
     // for previously guessed keystrokes
     else if (userGuesses.includes(userGuess)) {
-        console.log("You've already guessed " + userGuess + "! Guess again.")
+        document.querySelector("#messageToUser").innerHTML ="You've already guessed " + userGuess + "!")
     }
     // for running the game otherwise
     else {
