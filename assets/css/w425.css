@@ -1,0 +1,75 @@
+@media screen and (max-width: 425px) {
+    
+    /*
+    ==============================
+    BASIC SETUP
+    ==============================
+    */
+
+    .container {
+        width: 100%;
+    }
+
+    /*
+    ==============================
+    HEADER
+    ==============================
+    */
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .subhead {
+        font-size: 1.15em;
+    }
+
+    /*
+    ==============================
+    SECTION
+    ==============================
+    */
+
+    .absolute {
+        top: 170px;
+        width: 100%;
+        left: 0;
+        padding: 5px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .subhead {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #wordToGuess {
+        font-size: 0.75em;
+    }
+
+    /*
+    ==============================
+    FOOTER
+    ==============================
+    */
+
+    footer .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+
+    footer .grid > * {
+        text-align: center;
+    }
+
+    footer nav ul {
+        justify-content: space-around;       
+    }
+
+
+    footer nav li {
+        text-align: center;
+        padding-right: 0;
+    }
+
+}

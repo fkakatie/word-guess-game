@@ -36,7 +36,7 @@ var correctGuesses = [];
 var wins = 0;
     losses = 0;
 
-var guessesLeft = 5;
+var guessesLeft = 3;
 
 // replace computer choice with underscores on screen, to be updated by computerChoice.length
 var underscores = [];
@@ -79,7 +79,7 @@ function updateScores() {
 
 // reset guess count for new games
 function resetGuesses() {
-    guessesLeft = 5;
+    guessesLeft = 3;
     document.querySelector("#guessesLeft").innerHTML = guessesLeft;
 }
 

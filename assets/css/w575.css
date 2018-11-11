@@ -1,0 +1,55 @@
+@media screen and (max-width: 575px) {
+    
+    /*
+    ==============================
+    BASIC SETUP
+    ==============================
+    */
+
+    .container {
+        width: 100%;
+    }
+
+    /*
+    ==============================
+    HEADER
+    ==============================
+    */
+
+    header h1 {
+        font-size: 1.85em;
+    }
+
+    .subhead {
+        font-size: 1.15em;
+    }
+
+    /*
+    ==============================
+    SECTION
+    ==============================
+    */
+
+    .absolute {
+        top: 150px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #guessMe {
+        grid-column: span 1;
+    }
+
+    /*
+    ==============================
+    FOOTER
+    ==============================
+    */
+
+    footer .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

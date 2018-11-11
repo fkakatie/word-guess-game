@@ -1,0 +1,71 @@
+@media screen and (max-width: 505px) {
+    
+    /*
+    ==============================
+    BASIC SETUP
+    ==============================
+    */
+
+    .container {
+        width: 100%;
+    }
+
+    /*
+    ==============================
+    HEADER
+    ==============================
+    */
+
+    header h1 {
+        font-size: 2.7em;
+    }
+
+    .subhead {
+        font-size: 1.15em;
+    }
+
+    /*
+    ==============================
+    SECTION
+    ==============================
+    */
+
+    .absolute {
+        top: 194px;
+        width: 100%;
+        left: 0;
+        padding: 5px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .absolute > * {
+        display: inline-block;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #guessMe {
+        grid-column: span 1;
+    }
+
+    #wins, #losses, #guessesLeft {
+        font-size: 1.25em;
+    }
+
+    section .grid {
+        padding-top: 40px;
+    }
+
+    /*
+    ==============================
+    FOOTER
+    ==============================
+    */
+
+    footer .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
