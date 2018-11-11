@@ -1,7 +1,28 @@
 // VARIABLES
-var wordList = ["BETTA", "EPSSILON", "DEELTA"]; // possible game choices
+var wordList = [
+    {name: "ANDY", img: "assets/images/abernard.jpg"},
+    {name: "ANGELA", img: "assets/images/amartin.jpg"},
+    {name: "CREED", img: "assets/images/cbratton.jpg"},
+    {name: "DWIGHT", img: "assets/images/dschrute.jpg"},
+    {name: "ERIN", img: "assets/images/ehannon.jpg"},
+    {name: "GABE", img: "assets/images/glewis.jpg"},
+    {name: "HOLLY", img: "assets/images/hflax.jpg"},
+    {name: "JIM", img: "assets/images/jhalpert.jpg"},
+    {name: "KELLY", img: "assets/images/kkapoor.jpg"},
+    {name: "KEVIN", img: "assets/images/kmalone.jpg"},
+    {name: "MEREDITH", img: "assets/images/mpalmer.jpg"},
+    {name: "MICHAEL", img: "assets/images/mscott.jpg"},
+    {name: "OSCAR", img: "assets/images/omartinez.jpg"},
+    {name: "PAM", img: "assets/images/pbeesly.jpg"},
+    {name: "PHYLLIS", img: "assets/images/pvance.jpg"},
+    {name: "RYAN", img: "assets/images/rhoward.jpg"},
+    {name: "STANLEY", img: "assets/images/shudson.jpg"},
+    {name: "TOBY", img: "assets/images/tflenderson.jpg"},
+]; // possible game choices
 
-var computerChoice = wordList[Math.floor(Math.random() * wordList.length)];
+var randomNumber = Math.floor(Math.random() * wordList.length);
+
+var computerChoice = wordList[randomNumber].name;
 
 // collect user input
 var userGuess = " "; // to be replaced by event.key
@@ -28,7 +49,6 @@ function printWord() {
         // Checking userGuess against every letter of computerChoice (capturing double-letters)
         for (var i = 0; i < computerChoice.length; i++) {
             var computerChoiceSplit = computerChoice.split(""); // splits computerChoice into array of letters
-            console.log(computerChoiceSplit);
             if (userGuess === computerChoiceSplit[i]) {
                 underscores[i] = computerChoiceSplit[i];
             }
@@ -43,11 +63,18 @@ function printWord() {
 
 }
 
+// displays character image
+function displayImage() {
+    var characterImage = document.querySelector("#characterImage");
+    characterImage.src = wordList[randomNumber].img;
+}
+
 // pushes new scores to document
 function updateScores() {
     document.querySelector("#wins").innerHTML = wins;
     document.querySelector("#losses").innerHTML = losses;
     document.querySelector("#guessesLeft").innerHTML = guessesLeft;
+    document.querySelector("#incorrectGuesses").innerHTML = incorrectGuesses;
 }
 
 // reset guess count for new games
@@ -67,6 +94,7 @@ function clearGuesses() {
     incorrectGuesses = [];
     allGuesses();
     underscores = [];
+    document.querySelector("#incorrectGuesses").innerHTML = incorrectGuesses;
 }
 
 // generates underscores for each letter of computerChoice
@@ -80,25 +108,27 @@ function generateUnderscores() {
 // restarts the game
 function newWord() {
     clearGuesses();
-    computerChoice = wordList[Math.floor(Math.random() * wordList.length)]; // chooses new word
+    randomNumber = Math.floor(Math.random() * wordList.length);
+    computerChoice = wordList[randomNumber].name // chooses new word
     generateUnderscores();
     console.log(computerChoice);
     userGuess = " "; // clears userGuess, to be replaced by event.key
     printWord();
+    displayImage();
 };
 
 // evaluate if win or loss
 function ifWinOrLoss() {
     // join underscores array into 'string', compare to computerChoice
     if (underscores.join("") == computerChoice) {
-        console.log("You win!");
+        document.querySelector("#messageToUser").innerHTML = "You win! It's " + computerChoice + ".";
         wins++;
         updateScores(); // start new game
         resetGuesses();
         newWord();
     }
     else if (guessesLeft < 1) {
-        console.log("You lose!")
+        document.querySelector("#messageToUser").innerHTML = "You lost! It was " + computerChoice + ".";
         losses++;
         updateScores(); // start new game
         resetGuesses();
@@ -107,24 +137,11 @@ function ifWinOrLoss() {
 
 }
 
-
-
-
-// collect all user guesses
-// must be alphabetical key
-// must be unguessed key
-// if correct guess, replace ALL underscores with correct guess
-// if incorrect, count down tries and log wrong guesses
-// if full word guessed, announce win, count up wins, and reset word
-// if word not guessed, announce loss and missed word, and reset word
-
-
-
-
 // collect userGuess by keystroke
 document.onkeyup = function (event) {
     userGuess = event.key.toUpperCase(); // convert to uppercase
     console.log(userGuess);
+
     // for non-alphabet keystroke
     if (alphabet.indexOf(userGuess) === -1) {
         console.log("Letters only, please.");

@@ -56,6 +56,12 @@ section {
     text-align: center;
 }
 
+#messageToUser {
+    grid-column: span 2;
+    font-size: 3em;
+    text-align: center;
+}
+
 /* .wrongGuesses {
     abc
 }

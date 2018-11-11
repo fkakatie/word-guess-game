@@ -9,10 +9,6 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <!-- JAVSCRIPT -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -30,11 +26,17 @@
         <div class="container grid">
 
             <div id="guessMe">
-                <p id="wordToGuess">Guess Me!</p>
+                <img class="charImg" src="" id="characterImage" />
+                <h2 id="wordToGuess">Guess Me!</h2>
+            </div>
+
+            <div id="messageToUser">
+                <h2 id="message">Press any key to get started.</h2>
             </div>
 
             <div class="wrongGuesses">
-                <p id="incorrectGuesses">WRONG GUESSES</p>
+                <p>Wrong Guesses:</p>
+                <p id="incorrectGuesses"></p>
             </div>
 
             <div class="gameStats">
@@ -54,7 +56,9 @@
         </div>
         
     </footer>
-
+   
+    <!-- Javascript -->
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
 </body>
 
 </html>
