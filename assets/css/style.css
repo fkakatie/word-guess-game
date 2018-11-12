@@ -7,6 +7,7 @@ BASIC SETUP
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: #fbfbfb;
+    background-image: url("../images/linedpaper.png");
 }
 
 .container {
@@ -71,11 +72,6 @@ SECTION
     background: #ccc;
     text-align: center;
     font-size: 1.5em;
-}
-
-section {
-    background: #fbfbfb;
-    background-image: url("../images/linedpaper.png");
 }
 
 .absolute {
