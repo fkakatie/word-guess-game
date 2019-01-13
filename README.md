@@ -34,7 +34,7 @@ The mechanics of this game are fairly simple, though the content may pose some c
 
 ## Where users can get help with this project ## 
 
-If you have any questions about this obviously very intricate and sophisticated project, initiate a new pull request and leave a comment!
+If you have any questions about this obviously very intricate and sophisticated project, visit my portfolio and [send me a message](https://fkakatie.github.io/responsive-portfolio/contact.html).
 
 ## Who maintains this project ##
 
